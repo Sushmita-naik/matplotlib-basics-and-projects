@@ -1,14 +1,14 @@
-# import os
-# os.environ['MPLCONFIGDIR'] = r'C:\Users\sushm\OneDrive\Desktop\Matplotlib'
-# import matplotlib.pyplot as plt
-# # from matplotlib import pyplot as plt
-# x=[1,2,3,4,5]
-# y=[2,4,6,8,10]
-# # plt.plot(x,y)
-# # plt.show()
-# c=["b","m","r","c","y"]
-# plt.bar(x,y,color=c)
+import os
+os.environ['MPLCONFIGDIR'] = r'C:\Users\sushm\OneDrive\Desktop\Matplotlib'
+import matplotlib.pyplot as plt
+# from matplotlib import pyplot as plt
+x=[1,2,3,4,5]
+y=[2,4,6,8,10]
+# plt.plot(x,y)
 # plt.show()
+c=["b","m","r","c","y"]
+plt.bar(x,y,color=c)
+plt.show()
 
 
 # Bar plot
