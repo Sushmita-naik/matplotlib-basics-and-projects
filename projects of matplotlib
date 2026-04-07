@@ -34,6 +34,30 @@ plt.ylabel("Average marks")
 plt.title("Average marks per subject")
 plt.show()
 
+# sleep hours vs mobile usage hours for 2 weeks
+import matplotlib.pyplot as plt
+import pandas as pd
+data={
+        'Day': ['Mon','Tue','Wed','Thu','Fri','Sat','Sun',
+            'Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+    'Week': [1,1,1,1,1,1,1, 2,2,2,2,2,2,2],
+    'Sleep_hours': [7,6,8,5,6,9,8, 6,5,7,6,5,8,7],
+    'Mobile_usage_hours':[5,6,8,3,7,9,5, 4,5,6,7,8,9,1]
+}
+data=pd.DataFrame(data)
+print(data)
+plt.xlabel("Mobile_usage_hours")
+plt.ylabel("Sleep_hours")
+plt.scatter(data["Mobile_usage_hours"],data["Sleep_hours"])
+plt.show()
+weekly_avg=data.groupby('Week')['Sleep_hours'].mean()
+print(weekly_avg)
+plt.bar(weekly_avg.index,weekly_avg.values)
+plt.xlabel("Week")
+plt.ylabel("Average Sleep hours")
+plt.title("Weekly avg sleep")
+plt.show()
+
 
 
 
